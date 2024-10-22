@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turf Booking System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Turf Booking</h1>
+    </header>
+
+    <main>
+      <section class="booking-form">
+        <h2>Book Your Turf</h2>
+        <form id="turfForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            placeholder="Enter 10 digit phone number"
+            required
+          />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Time Slot:</label>
+          <select id="time" name="time" required>
+            <option value="">Select Time</option>
+            <option value="6AM-7AM">6AM-7AM</option>
+            <option value="7AM-8AM">7AM-8AM</option>
+            <option value="8AM-9AM">8AM-9AM</option>
+            <option value="9AM-10AM">9AM-10AM</option>
+          </select>
+
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+
+      <section class="booking-details">
+        <h2>Booked Slots</h2>
+        <ul id="bookedSlots"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Turf Booking System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
